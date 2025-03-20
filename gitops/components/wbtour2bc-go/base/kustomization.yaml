@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: wbtour2bc-go
+  janus-idp.io/tekton: wbtour2bc-go
+  backstage.io/kubernetes-id: wbtour2bc-go
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: wbtour2bc-go
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
